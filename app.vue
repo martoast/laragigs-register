@@ -1,7 +1,7 @@
 <template>
   <div class="container register-container">
     <div class="row justify-content-center align-items-center" style="height:100vh;">
-      <div class="col-lg-6 col-md-8">
+      <div class="col-md-6">
         <div class="card">
           <div class="card-body">
             <h1 class="card-title text-center mb-5">Create account</h1>
