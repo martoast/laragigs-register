@@ -22,16 +22,16 @@
               <div class="form-group mb-4">
                 <label for="password" class="form-label">Password</label>
                 <input v-model="data.form.password" type="password" class="form-control" :class="{ 'is-invalid': hasError('password') }" id="password" placeholder="Enter your password">
-                <div v-if="data.errors?.password" class="invalid-feedback">
+                <div v-if="data.errors?.password" class="invalid-feedback px-1">
                   <template v-for="error in data.errors.password" :key="error">
-                    <span v-html="error"></span><br>
+                    <li v-html="error"></li>
                   </template>
                 </div>
               </div>
               <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary" :disabled="data.loading">Submit</button>
               </div>
-              <p class="mt-4 text-center">Already have an account? <a :href="config.public.loginUrl">Log In</a></p>
+              <p class="mt-4 text-center">Already have an account? <a :href="config.public.loginUrl" style="color:#F5A623;">Log In</a></p>
             </form>
           </div>
         </div>
@@ -94,15 +94,15 @@ const onSubmit = async () => {
     color: #333;
   }
   .register-container .form-control:focus {
-    border-color: #fa9d00;
+    border-color: #f8b500;
     box-shadow: none;
   }
   .register-container button {
     border-radius: 8px;
     font-size: 1.25rem;
     padding: 1.25rem;
-    background-color: #fa9d00;
-    border-color: #fa9d00;
+    background-color: #f8b500;
+    border-color: #f8b500;
   }
   .register-container button:hover {
     background-color: #fa7f00;
