@@ -62,9 +62,10 @@ const onSubmit = async () => {
             method: 'post',
             body: data.form
         })
-        const { $loginUser } = useNuxtApp()
+        const { $loginUser, $retriveUser } = useNuxtApp()
         await $loginUser(response);
     } catch (error) {
+        console.error(error)
         data.errors = error.response._data.errors
         data.loading = false
     }
